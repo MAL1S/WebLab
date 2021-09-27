@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+</head>
+<body>
+    <div class="row fa-2x">
+        <div class="block">
+            image
+            <i class="fas fa-file-image"></i>
+        </div>
+        <div class="block" style="flex-grow: 2; text-align: center;">
+            <i class="fas fa-file-pdf"></i>
+            <i class="fas fa-file-pdf"></i>
+            <i class="fas fa-file-pdf"></i>
+        </div>
+        <div class="block" style="flex-grow: 0; flex-basis: auto;">
+            <i class="fas fa-file-word"></i>
+            word
+        </div>
+    </div>
+    
+    <div class="row fa-2x">
+        <div class="block" style="flex-grow: 0; flex-basis: auto;">
+            <i class="fas fa-file-excel"></i>
+            excel
+        </div>
+        <div class="block" style="text-align: center; flex-grow: 3;">
+            <i class="fas fa-file-image"></i>
+            <i class="fas fa-file-image"></i>
+        </div>
+        <div class="block" style="flex-grow: 0; flex-basis: auto;">
+            <i class="fas fa-file-code"></i>
+            code
+        </div>
+        <div class="block" style="flex-grow: 1; flex-basis: auto;">
+            <i class="fas fa-folder"></i>
+            folder
+        </div>
+    </div>
+
+    <div class="row fa-2x">
+        <div class="block" style="flex-basis: auto; flex-grow: 0;">
+            <i class="fas fa-file-archive"></i>
+        </div>
+        <div class="block powerpoint">
+            <i class="fas fa-file-powerpoint"></i>
+        </div>
+        <div class="block powerpoint">
+            <i class="fas fa-file-powerpoint"></i>
+        </div>
+        <div class="block powerpoint">
+            <i class="fas fa-file-powerpoint"></i>
+        </div>
+        <div class="block" style="flex-basis: auto; flex-grow: 0;">
+            <i class="fas fa-file-archive"></i>
+        </div>
+    </div>
+
+    <div class="row fa-2x">
+        <div class="block alt">
+            <i class="fas fa-file-alt"></i>
+        </div>
+        <div class="block alt">
+            <i class="fas fa-file-alt"></i>
+        </div>
+        <div class="block alt">
+            <i class="fas fa-file-alt"></i>
+        </div>
+        <div class="block alt">
+            <i class="fas fa-file-alt"></i>
+        </div>
+        <div class="block" style="flex-grow: 20; text-align: center;">
+            <i class="fas fa-file-excel"></i>
+        </div>
+    </div>
+
+
+    <style>
+        .block {
+            border: 1px solid black;
+            margin-bottom: 0.5rem;
+            flex-grow: 1;
+            margin: 0.25rem;
+            padding: 0.5rem;
+            flex-basis: 0;
+        }
+        .row {
+            display: flex;
+        }
+        .powerpoint {
+            text-align: center;
+            background: crimson;
+        }
+        .alt {
+            text-align: center;
+            background: cyan;
+            flex-basis: auto; 
+            flex-grow: 0;
+        }
+    </style>
+</body>
+</html>
