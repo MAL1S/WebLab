@@ -1,0 +1,23 @@
+{% extends "__layout.twig" %}
+
+{% block content %}
+    <h1>{{title}}</h1>
+    <ul class="nav nav-pills">
+        <li class="nav-item">
+         
+          {% import "forms.html" as forms %}
+          {{ forms.btn('Image', '/'~ name~'/image', type == 'image','primary nav-link active') }}
+          </li>
+        <li class="nav-item ">
+      
+          {% import "forms.html" as forms %}
+          {{forms.btn('Description', '/'~ name~ '/info',type == 'text','primary nav-link active' ) }}
+          
+        </li>
+      </ul>
+    <ul class="list-group">
+    <li class="list-group-item">
+
+    {% block objectContent %}
+    {% endblock %}
+{% endblock %}

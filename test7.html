@@ -15,7 +15,9 @@
         
         <div class="row p-2 m-auto w-50 mt-5 align-items-center rounded rounded-3 border border-white border-4 bg-light shadow-lg ">
             <div class="col-6 text-center">
-                <img src="https://static.zerochan.net/Fujiwara.Takumi.%28Initial.D%29.full.501736.jpg" class="rounded-circle w-100 border border-white border-4 shadow mb-3" alt="Винни-Пух">
+                <div class="main-image-wrapper">
+                  <img src="https://static.zerochan.net/Fujiwara.Takumi.%28Initial.D%29.full.501736.jpg" class="main-image rounded-circle w-100 border border-white border-4 shadow mb-3">
+                </div>
                 <h3 class="card-title">Гонщик нелегальный  </h5>
                 <h5 class="card-subtitle mb-3 text-muted">профессиональный</h6>
             </div>
@@ -47,6 +49,22 @@
         </div>
         
     </div>
+
+    <style>
+      .main-image-wrapper {
+          width: 250px; 
+          height: 250px; 
+          border: 1px solid silver;
+          margin: 8px;
+          box-shadow: 0 0 16px silver;
+          border-radius: 50%;  /* поставил 50% */
+          overflow: hidden; 
+      }
+  
+      .main-image {
+          height: 100%;
+      }
+  </style>
 
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
