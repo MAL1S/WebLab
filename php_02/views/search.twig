@@ -1,0 +1,37 @@
+{% extends "__layout.twig" %}
+
+{% block content %}
+    <h1>Search</h1>
+
+    <form action="" class="mb-2">
+        <div class="row mb-2">
+            <div class="col-md-3">
+                <label for="inputState" class="form-label">Type</label>
+                <select id="inputState" class="form-select" name="type">
+                    <option value="">All</option>
+                    <option value="konoha">Konoha</option>
+                    <option value="akatsuki">Akatsuki</option>
+                </select>
+            </div>
+            <div class="col-md-4">
+                <label class="form-label">Name</label>
+                <input type="text" name="title" class="form-control">
+            </div>
+            <div class="col-md-4">
+                <label class="form-label">Description</label>
+                <input type="text" name="description" class="form-control">
+            </div>
+            <div class="col-md-1 d-flex align-items-end">
+                <button class="btn btn-primary" type="submit">Find</button>
+            </div>
+        </div>
+    </form>
+
+    
+    <ul class="list-group">
+        {% for object in objects %}
+            <li class="list-group-item"><a href="characters/{{object.id}}">{{ object.title }}</a></li>
+        {% endfor %}
+    </ul>
+    
+{% endblock %}

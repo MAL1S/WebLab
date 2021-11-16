@@ -10,7 +10,7 @@ class ObjectController extends BaseNarutoTwigController {
             if ($_GET['show'] == 'image') {
                 return "base_image.twig";
             } elseif ($_GET['show'] == 'info') {
-                $this->template = "base_info.twig";
+                return "base_info.twig";
             }
         }
         return parent::getTemplate();
