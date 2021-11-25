@@ -1,0 +1,28 @@
+{% extends "__layout.twig" %}
+
+{% block content %}
+    <h1>Adding new Naruto character type</h1>
+    <hr>
+    
+    {% if message %}
+    <div class="alert alert-info">
+        {{ message }}
+        <a href="/type">Open types</a>
+    </div>
+    {% endif %}
+
+    <form method="post" enctype="multipart/form-data" class="row g-3">
+        <div class="col-4">
+            <label class="form-label">Name</label>
+            <input type="text" class="form-control" name="name">
+        </div>
+        <div class="mb-3">
+            <label for="formFile" class="form-label">Upload image file</label>
+            <input class="form-control" type="file" name="image">
+          </div>
+        <div class="col-12 text-end">
+            <button type="submit" class="btn btn-primary">Add</button>
+        </div>
+    </form>
+
+{% endblock %}

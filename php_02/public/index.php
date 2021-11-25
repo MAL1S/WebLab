@@ -5,6 +5,10 @@
     require_once "../controllers/MainController.php";
     require_once "../controllers/ObjectController.php";
     require_once "../controllers/SearchController.php";
+    require_once "../controllers/NarutoObjectCreateController.php";
+    require_once "../controllers/TypeController.php";
+    require_once "../controllers/NarutoTypeCreateController.php";
+    //require_once "../controllers/TypeCharactersController.php";
 
     $loader = new \Twig\Loader\FilesystemLoader('../views');
     $twig = new \Twig\Environment($loader, [
@@ -18,6 +22,10 @@
     $router->add("/", MainController::class);
     $router->add("/characters/(?P<id>\d+)", ObjectController::class);
     $router->add("/search", SearchController::class);
+    $router->add("/character/create", NarutoObjectCreateController::class);
+    $router->add("/type", TypeController::class);
+    $router->add("/type/", MainController::class);
+    $router->add("/type/create", NarutoTypeCreateController::class);
 
     $router->get_or_default(Controller404::class);
 ?>
