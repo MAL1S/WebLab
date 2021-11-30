@@ -1,0 +1,21 @@
+//GET http://localhost:9007/api/characters/
+//GET http://localhost:9007/api/characters/3
+# POST http://localhost:9007/api/characters/
+# content-type: application/json
+
+# {
+#     "description": "ij gnimgimqrgicergo,wigcm ersiocgm uuo"
+# }
+
+# POST http://localhost:9007/api/characters/
+# content-type: application/json
+
+# {
+#     "title": "123",
+#     "description": "321312",
+#     "info": "323232",
+#     "type": "konoha",
+#     "image": "https://www.goodfreephotos.com/albums/canada/alberta/banff-national-park/very-majestic-and-beautiful-landscape-with-mountains-in-banff-national-park-alberta-canada.jpg"
+# }
+
+DELETE http://localhost:9007/api/characters/19

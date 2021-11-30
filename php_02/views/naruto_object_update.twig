@@ -1,15 +1,13 @@
 {% extends "__layout.twig" %}
 
 {% block content %}
-    <h1>Adding new Naruto character</h1>
+    <h1>Editing existing Naruto character</h1>
     <hr>
-
-    {{object}}
     
     {% if message %}
     <div class="alert alert-info">
         {{ message }}
-        <a href="/characters/{{id}}">Open new character</a>
+        <a href="/characters/{{id}}">Open edited character</a>
     </div>
     {% endif %}
 
@@ -20,19 +18,21 @@
         </div>
         <div class="col-4">
             <label class="form-label">Short description</label>
-            <input type="text" class="form-control" name="description">
+            <input type="text" class="form-control" name="description" value="{{object.description}}">
         </div>
         <div class="col-4">
             <label class="form-label">Type</label>
             <select class="form-control" name="type">
                 {% for type in types %}
-                    <option value="{{object.title}}">
+                    <option value="{{object.title}}" {% if type.name == object.type %} selected {% endif %}>
                         {{ type.name|title }}
                     </option>
                 {% endfor %}
             </select>
         </div>
         <div class="mb-3">
+            <img src="{{object.image}}" style="width: 300px;">
+            <br>
             <label for="formFile" class="form-label">Upload image file</label>
             <input class="form-control" type="file" name="image">
           </div>
@@ -40,7 +40,7 @@
             <textarea name="info" placeholder="Full description..." class="form-control" rows="5">{{object.info}}</textarea>
         </div>
         <div class="col-12 text-end">
-            <button type="submit" class="btn btn-primary">Add</button>
+            <button type="submit" class="btn btn-primary">Edit</button>
         </div>
     </form>
 

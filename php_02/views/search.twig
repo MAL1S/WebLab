@@ -9,8 +9,11 @@
                 <label for="inputState" class="form-label">Type</label>
                 <select id="inputState" class="form-select" name="type">
                     <option value="">All</option>
-                    <option value="konoha">Konoha</option>
-                    <option value="akatsuki">Akatsuki</option>
+                    {% for type in types %}
+                        <option value="{{type.name}}">
+                            {{ type.name|title }}
+                        </option>
+                    {% endfor %}
                 </select>
             </div>
             <div class="col-md-4">
@@ -29,8 +32,8 @@
 
     
     <ul class="list-group">
-        {% for object in objects %}
-            <li class="list-group-item"><a href="characters/{{object.id}}">{{ object.title }}</a></li>
+        {% for item in objects %}
+            <li class="list-group-item"><a href="characters/{{item.id}}">{{ item.title }}</a></li>
         {% endfor %}
     </ul>
     
